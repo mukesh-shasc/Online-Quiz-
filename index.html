@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Trivia Run — Online Quiz</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="stage">
+
+    <!-- START SCREEN -->
+    <section class="card" id="start-screen">
+      <p class="eyebrow">Trivia Run</p>
+      <h1>How much do you actually know?</h1>
+      <p class="lede">25 questions on Python, data structures &amp; algorithms. No lifelines. See your score at the end.</p>
+      <button class="btn-primary" id="start-btn">Start quiz</button>
+    </section>
+
+    <!-- QUIZ SCREEN -->
+    <section class="card hidden" id="quiz-screen">
+      <div class="quiz-top">
+        <span id="question-count">Question 1 / 25</span>
+        <span id="score-live">Score: 0</span>
+      </div>
+
+      <div class="progress-track">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+
+      <h2 id="question-text">Question text goes here</h2>
+
+      <div class="options" id="options-container"></div>
+
+      <div class="quiz-footer">
+        <p id="feedback" class="feedback"></p>
+        <button class="btn-primary" id="next-btn" disabled>Next question</button>
+      </div>
+    </section>
+
+    <!-- RESULT SCREEN -->
+    <section class="card hidden" id="result-screen">
+      <p class="eyebrow">Results</p>
+      <h1 id="result-heading">Nice work!</h1>
+      <p class="score-display"><span id="final-score">0</span><span class="score-total">/25</span></p>
+      <p class="lede" id="result-message"></p>
+      <button class="btn-primary" id="restart-btn">Play again</button>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
